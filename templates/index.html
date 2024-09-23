@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Prediction</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Weight Prediction</h1>
+      <form method="POST" class="mt-4">
+        <div class="form-group">
+          <label for="height">Enter Height (m):</label>
+          <input
+            type="text"
+            class="form-control"
+            id="height"
+            name="height"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="job">Enter Job:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="job"
+            name="job"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Predict Weight</button>
+      </form>
+      {% if result %}
+      <div class="alert alert-info mt-4">{{ result }}</div>
+      {% endif %} {% with messages = get_flashed_messages() %} {% if messages %}
+      <div class="alert alert-danger mt-4">{{ messages[0] }}</div>
+      {% endif %} {% endwith %}
+    </div>
+  </body>
+</html>
