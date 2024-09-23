@@ -3,8 +3,8 @@ import joblib
 import pandas as pd
 
 # Load the model and feature names
-model = joblib.load('BT5/linearDeploy/linear_regression_model.pkl')
-feature_names = joblib.load('BT5/linearDeploy/feature_names.pkl')
+model = joblib.load('linear_regression_model.pkl')
+feature_names = joblib.load('feature_names.pkl')
 
 app = Flask(__name__)
 
