@@ -6,7 +6,6 @@ import pandas as pd
 model = joblib.load('BT5/linearDeploy/linear_regression_model.pkl')
 feature_names = joblib.load('BT5/linearDeploy/feature_names.pkl')
 
-# Create a Flask app
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
